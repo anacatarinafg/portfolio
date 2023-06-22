@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import transition from '../../transition';
 
 const Work = () => {
   return (
@@ -8,4 +9,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default transition(Work);

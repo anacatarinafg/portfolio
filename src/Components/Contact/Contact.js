@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import transition from '../../transition';
 
 const Contact = () => {
   return (
@@ -8,4 +9,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default transition(Contact);
