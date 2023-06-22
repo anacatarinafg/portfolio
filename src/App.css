@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  src: url("../public/Roslindale_Web/fonts/Roslindale-DisplayCondensedMedium-Testing.woff") format("woff");
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  width: 100vw;
+  background-color: #c6d5c6;
+  color: #141414;
+  font-family: "Roslindale", "Helvetica Ne";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input,
+button {
+  all: unset;
+}
+
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
 }
