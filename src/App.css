@@ -13,8 +13,7 @@
   font-weight: 500;
 }
 
-body {
-  width: 100vw;
+html, body {
   background-color: #c6d5c6;
   color: #141414;
   font-family: "Roslindale", "Helvetica Ne";

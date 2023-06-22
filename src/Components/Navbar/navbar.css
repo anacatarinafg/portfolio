@@ -1,20 +1,32 @@
 .navbar {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: #c6d5c6;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px solid #141414;
 }
-.navbar__logo {
 
+.navbar__logo {
+    margin-left: 2.5%;
 }
+
 .navbar__list {
     display: flex;
+    gap: 15px;
+    margin-right: 2.5%;
 }
-.navbar__logo, .navbar__item {
-    margin: 1em 2em;
-    font-weight: 400;
-    font-size: 1.5vw;
-}
-.navbar__link {
 
+.navbar__logo,
+.navbar__item {
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: lowercase;
+    border: 1px solid #141414;
+    border-radius: 25px;
+    padding: .25em;
 }
+
+.navbar__link {}
