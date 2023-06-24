@@ -29,6 +29,29 @@ html, body {
   background-color: #e0e0e0;
   color: #141414;
   font-family: "Roslindale", "Helvetica Ne";
+  cursor: none;
+}
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.cursor__text {
+  font-size: 5px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  display: none;
 }
 
 a {
