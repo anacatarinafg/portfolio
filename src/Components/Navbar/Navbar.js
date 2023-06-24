@@ -5,13 +5,34 @@ import "./navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className='navbar'>
-      <Link to="/home" className='navbar__logo'>ag</Link>
-      <ul className='navbar__list'>
-        <li className='navbar__item'><Link to="/work" className='navbar__link'>Work</Link></li>
-        <li className='navbar__item'><Link to="/about" className='navbar__link'>About</Link></li>
-        <li className='navbar__item'><Link to="/contact" className='navbar__link'>Contact</Link></li>
-      </ul>
+    <nav class="navbar">
+      <div class="navbar__wrapper">
+        <div class="navbar__menu">
+          <div class="navbar__shrink">
+            <div class="navbar__left">
+              *
+              <div class="navbar__logo">
+                <Link to="/">ag</Link></div>
+            </div>
+            <div class="navbar__links">
+              <Link to="/about">About</Link>
+              <Link to="/work">Work</Link>
+              <Link to="/contact">Contact</Link>
+            </div>
+          </div>
+          <div class="navbar__expand">
+            <span class="divider"></span>
+            <div class="expand row-1">
+              <p>Ana Gonçalves</p>
+              <span>Portugal</span>
+            </div>
+            <div class="expand row-2">
+              <p>junior front-end developer
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   )
 }
