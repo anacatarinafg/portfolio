@@ -1,10 +1,5 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
+
 @font-face {
   src: url("../public/FONT-PACK/10\ Canopee/Canopee.otf") format("woff");
   font-family: "Canopee";
@@ -18,6 +13,7 @@
   font-style: normal;
   font-weight: 500;
 }
+
 @font-face {
   src: url("../public/Mak/Web/MAK.woff") format("woff");
   font-family: "Mak";
@@ -25,12 +21,22 @@
   font-weight: 500;
 }
 
-html, body {
-  background-color: #e0e0e0;
-  color: #141414;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #111111;
+  color: #fff6e5;
   font-family: "Roslindale", "Helvetica Ne";
   cursor: none;
 }
+
 #cursor {
   position: fixed;
   top: 0;
@@ -47,6 +53,7 @@ html, body {
   align-items: center;
   background-color: #fff;
 }
+
 .cursor__text {
   font-size: 5px;
   font-weight: 900;
@@ -66,19 +73,6 @@ li {
 input,
 button {
   all: unset;
-}
-
-
-h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 288px;
-  font-weight: 500;
-  line-height: 1;
-  text-transform: capitalize;
-  font-family: "Mak", Arial;
 }
 
 .slide-in {

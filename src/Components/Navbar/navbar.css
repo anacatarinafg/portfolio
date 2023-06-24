@@ -1,13 +1,24 @@
+.navbar {
+    height: 100px;
+}
 .navbar__wrapper {
     position: fixed;
     top: 0;
     width: 100%;
+    transition: top 0.3s;
+}
+
+.visible {
+    top: 0;
+}
+
+.hidden {
+    top: -5.6rem;
 }
 
 .navbar__menu {
-    background-color: #ffffff60;
     height: 5.6rem;
-    margin: 1.6rem;
+    margin: .5rem;
     padding: 2rem;
     border-radius: 0.8rem;
     display: flex;
@@ -21,7 +32,7 @@
 }
 
 .navbar__menu:hover {
-    background-color: #ffffff;
+    background-color: #141414;
     height: 20rem;
 }
 
@@ -62,12 +73,12 @@
 }
 
 .navbar__links a {
-    color: #000;
     padding: 0 20px;
     font-weight: 300;
     text-decoration: none;
     font-size: 1.2rem;
-    font-family: "Canopee";
+    font-family: 'Archivo', sans-serif;
+    text-transform: uppercase;
 }
 
 @media (max-width: 900) {
@@ -77,7 +88,6 @@
 }
 
 .menu-right a {
-    color: #000;
     padding: 0 20px;
     text-decoration: none;
     font-size: 1.2rem;
@@ -136,7 +146,7 @@
     text-transform: uppercase;
     padding: 0.25rem 0.6rem 0.15rem 0.6rem;
     font-size: 0.8rem;
-    border: 1px solid #000;
+    border: 1px solid #fff6e5;
     border-radius: 0.8rem;
     margin-left: 1rem;
 
