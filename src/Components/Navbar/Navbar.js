@@ -1,24 +1,28 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger'; 
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar = ({ style }) => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger); 
+    gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.create({
-      animation: gsap.from(".navbar__logotype", {
-        y: "50vh",
+      animation: gsap.from('.navbar__logotype', {
+        y: '50vh',
         scale: 6,
         yPercent: -50,
       }),
+      toggleClass: {
+        targets: '.navbar__logotype',
+        className: 'navbar__logotype--shrink',
+      },
       scrub: true,
-      trigger: ".content",
-      start: "top bottom",
-      endTrigger: ".content",
-      end: "top center",
+      trigger: '.content',
+      start: 'top bottom',
+      endTrigger: '.content',
+      end: 'top center',
     });
   }, []);
   return (

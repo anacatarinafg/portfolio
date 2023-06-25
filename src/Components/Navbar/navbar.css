@@ -1,5 +1,5 @@
 .navbar {
-    width: 100vw;
+    width: 100%;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -62,13 +62,13 @@
 .container {
     width: 100%;
     height: 100vh;
-    background-color: #fff6e5;
+    background-color: #111111;
 
 }
 .content {
     width: 100%;
     height: 100vh;
-    background-color: #fff6e5;
+    background-color: #111111;
     position: relative;
     padding: 0 4rem;
 }
