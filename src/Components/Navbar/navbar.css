@@ -1,11 +1,20 @@
 .navbar {
-    height: 100px;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
 }
+
 .navbar__wrapper {
+    width: 95%;
+    height: 80px;
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 0%;
     transition: top 0.3s;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .visible {
@@ -16,156 +25,56 @@
     top: -5.6rem;
 }
 
-.navbar__menu {
-    height: 5.6rem;
-    margin: .5rem;
-    padding: 2rem;
-    border-radius: 0.8rem;
+.navbar__list {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: 1.4rem;
-    font-weight: 400;
-    transition: 0.3s;
+    gap: 2.5em;
 }
 
-.navbar__menu:hover {
-    background-color: #141414;
-    height: 20rem;
+.navbar__item {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Archivo", sans-serif;
+    ;
 }
 
-@media (max-width: 900) {
-    .navbar__menu:hover {
-        height: 90vh;
-    }
-}
+.navbar__link {}
 
-.navbar__shrink {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+.navbar__logotypeBox {
+    
 }
-
-.navbar__left {
-    position: relative;
+.navbar__logotype {
+    position: fixed;
     top: 0;
-    display: flex;
-    flex: 1;
-    text-align: left;
+    left: 50%;
+    transform: translateX((-50%));
+    padding: 1em;
+    font-size: 22px;
+    text-transform: lowercase;
+    font-family: "Cosi Times";
+    z-index: 2;
+    transition: font-size 0.3s;
 }
+.navbar__logotype--shrink {
+    font-size: 18px; 
+  }
 
-.navbar__links {
-    display: flex;
-    flex: 0;
-    text-align: center;
-}
-
-.navbar__logo {
-    padding: 0 10px;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-family: "Canopee";
-}
-
-.navbar__links a {
-    padding: 0 20px;
-    font-weight: 300;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: 'Archivo', sans-serif;
-    text-transform: uppercase;
-}
-
-@media (max-width: 900) {
-    .navbar__links {
-        display: none;
-    }
-}
-
-.menu-right a {
-    padding: 0 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    position: relative;
-    font-weight: 300;
-}
-
-.navbar__expand {
-    position: relative;
+.container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+    height: 100vh;
+    background-color: #fff6e5;
 
-.navbar__expand p {
-    margin: 0.2rem 0;
-    font-family: "Canopee", sans-serif;
-    font-size: 3.2rem;
-    line-height: 70px;
 }
-
-.navbar__expand .divider {
-    position: relative;
-    width: 0%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
-}
-
-.navbar__menu:hover .divider {
+.content {
     width: 100%;
-    transition: 0.6s;
-    transition-delay: 0.25s;
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.navbar__expand .row-1 {
+    height: 100vh;
+    background-color: #fff6e5;
     position: relative;
-    display: flex;
-    align-items: center;
-    margin-top: 2.2rem;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.02s ease;
+    padding: 0 4rem;
 }
-
-.navbar__menu:hover .row-1 {
-    transition: 0.6s;
-    transition-delay: 0.3s;
-    opacity: 1;
-    transform: translateY(0px);
+.content img {
+    width: 100%;
 }
-
-.navbar__expand .row-1 span {
-    text-transform: uppercase;
-    padding: 0.25rem 0.6rem 0.15rem 0.6rem;
-    font-size: 0.8rem;
-    border: 1px solid #fff6e5;
-    border-radius: 0.8rem;
-    margin-left: 1rem;
-
-}
-
-.navbar__expand .row-2 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 2.2rem;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.02s ease;
-}
-
-.navbar__menu:hover .row-2 {
-    transition: 0.6s;
-    transition-delay: 0.4s;
-    opacity: 1;
-    transform: translateY(0px);
+img {
+    margin-bottom: 4em;
 }

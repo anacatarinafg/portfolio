@@ -20,6 +20,12 @@
   font-style: normal;
   font-weight: 500;
 }
+@font-face {
+  src: url("../public/FONT-PACK/14\ Cosi\ Times/CosiTimes-Bold.ttf") format("woff");
+  font-family: "Cosi Times";
+  font-style: normal;
+  font-weight: 700;
+}
 
 *,
 *::before,
@@ -31,8 +37,8 @@
 
 html,
 body {
-  background-color: #111111;
-  color: #fff6e5;
+  background-color: #fff6e5;
+  color: #111111;
   font-family: "Roslindale", "Helvetica Ne";
   cursor: none;
 }
