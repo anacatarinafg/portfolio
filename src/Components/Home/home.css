@@ -2,19 +2,17 @@
 .container {
     width: 100%;
     height: 100vh;
-    background-color: #111111;
+    background-color: #fff6e5;
 
 }
 .content {
     width: 100%;
     height: 100vh;
-    background-color: #111111;
+    background-color: #fff6e5;
     position: relative;
     padding: 0 4rem;
 }
 .content img {
     height: 50vh;
-}
-img {
     margin-bottom: 4em;
 }

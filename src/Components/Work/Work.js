@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import TagCloud from 'TagCloud';
 import './work.css';
 import transition from '../../transition';
 
@@ -103,8 +104,30 @@ const Work = () => {
 
     },
   ];
+
+  useEffect(() => {
+    return () => {
+      const container = ".tagcloud";
+      const texts = [
+        "HTML", "CSS", "SASS", "BOOTSTRAP", "TAILWIND", "JAVASCRIPT", "TYPESCRIPT", "REACT", "ANGULAR", "NEXTJS", "GSAP", "JQUERY", "FIGMA", "GIT"
+      ];
+
+      const options = {
+        radius: 300,
+        maxSpeed: "normal",
+        initSpeed: "normal",
+        keep: true,
+      }
+      TagCloud(container, texts, options);
+    }
+  }, []);
+
   return (
     <>
+      <div class="tagcloud__box">
+        <span class="tagcloud"></span>
+      </div>
+
       <div className='infinite__scroll'>
         <div className='projects__wrapper'>
           {PROJECTS.map((project, index) => {
@@ -112,6 +135,7 @@ const Work = () => {
               <div className='project' key={index}>
                 <img src={project.img} alt='' />
                 <h2>{project.name}</h2>
+                <p>See if it's a cool design to put a paragraph here</p>
               </div>
             );
           })}

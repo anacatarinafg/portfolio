@@ -37,8 +37,8 @@
 
 html,
 body {
-  background-color: #111111;
-  color: #fff6e5;
+  background-color: #fff6e5;
+  color: #111111;
   font-family: "Roslindale", "Helvetica Ne";
   cursor: none;
 }
@@ -79,6 +79,22 @@ li {
 input,
 button {
   all: unset;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #fff6e5;
+  border: 1px solid #fff6e5;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #363636;
 }
 
 .slide-in {
