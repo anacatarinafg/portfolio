@@ -1,0 +1,123 @@
+.contact__container {
+    width: 100%;
+    height: 100%;
+}
+
+.contact__container .contact {
+    width: 95%;
+    height: 88.5%;
+    margin: auto;
+    position: absolute;
+    top: 7.5%;
+    right: 2.5%;
+    left: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.contact__container .contact__headline {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 52px;
+}
+
+.contact__container .contact__info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact__container .contact__info .contact__label {
+    font-size: 18px;
+    color: #474747;
+}
+
+.contact__container .contact__info .contact__email {
+    font-size: 18px;
+}
+
+.contact__container .contact__list {
+    display: flex;
+    gap: 3px;
+    font-size: 18px;
+}
+
+.contact__marquee {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+}
+
+.contact__marquee .contact__marqueeText {
+    font-size: 152px;
+    text-transform: uppercase;
+    padding-left: -10%;
+    display: inline-block;
+    animation: marquee 250s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact__container .contact {
+        width: 95%;
+        height: 90%;
+        margin: auto;
+        position: absolute;
+        top: 7.5%;
+        right: 2.5%;
+        left: 2.5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .contact__container .contact__headline {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .contact__container .contact__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .contact__container .contact__info .contact__label {
+        color: #474747;
+    }
+
+    .contact__container .contact__list {
+        display: flex;
+        gap: 3px;
+    }
+}

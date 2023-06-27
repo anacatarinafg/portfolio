@@ -1,22 +1,56 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import TagCloud from 'TagCloud';
 import './work.css';
 import transition from '../../transition';
 
 const Work = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  const scrollWrapRef = useRef(null);
+  const contentRef = useRef(null);
 
-    ScrollTrigger.create({
-      animation: gsap.from('.infinite__scroll', {
-        start: 1,
-        end: 'max',
-      }),
-      onLeaveBack: self => self.scroll(ScrollTrigger.maxScroll('.projects__wrapper') - 2),
-      onLeave: self => self.scroll(2),
-    }).scroll(2);
+  useEffect(() => {
+    const scrollWrap = scrollWrapRef.current;
+    let offset = 0;
+
+    // Function to perform smooth scrolling effect
+    const smoothScroll = () => {
+      offset += (window.pageYOffset - offset) * 0.04;
+
+      const scroll = `translateY(-${offset}px) translateZ(0)`;
+      scrollWrap.style.transform = scroll;
+
+      requestAnimationFrame(smoothScroll);
+    };
+
+    smoothScroll();
+
+    const content = contentRef.current;
+    let currentPos = window.pageYOffset;
+
+    // Function to perform distortion effect during scrolling
+    const callDistort = () => {
+      const newPos = window.pageYOffset;
+      const diff = newPos - currentPos;
+      const speed = diff * 0.35;
+
+      content.style.transform = `skewY(${speed}deg)`;
+      currentPos = newPos;
+      requestAnimationFrame(callDistort);
+    };
+
+    callDistort();
+
+    // Clean up the animation frames on component unmount
+    return () => {
+      cancelAnimationFrame(smoothScroll);
+      cancelAnimationFrame(callDistort);
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollWrap = scrollWrapRef.current;
+    const height = scrollWrap.getBoundingClientRect().height - 1;
+    document.body.style.height = Math.floor(height) + 'px';
   }, []);
 
   const PROJECTS = [
@@ -105,40 +139,18 @@ const Work = () => {
     },
   ];
 
-  useEffect(() => {
-    return () => {
-      const container = ".tagcloud";
-      const texts = [
-        "HTML", "CSS", "SASS", "BOOTSTRAP", "TAILWIND", "JAVASCRIPT", "TYPESCRIPT", "REACT", "ANGULAR", "NEXTJS", "GSAP", "JQUERY", "FIGMA", "GIT"
-      ];
-
-      const options = {
-        radius: 300,
-        maxSpeed: "normal",
-        initSpeed: "normal",
-        keep: true,
-      }
-      TagCloud(container, texts, options);
-    }
-  }, []);
-
   return (
     <>
-      <div class="tagcloud__box">
-        <span class="tagcloud"></span>
-      </div>
-
-      <div className='infinite__scroll'>
-        <div className='projects__wrapper'>
-          {PROJECTS.map((project, index) => {
-            return (
-              <div className='project' key={index}>
-                <img src={project.img} alt='' />
-                <h2>{project.name}</h2>
-                <p>See if it's a cool design to put a paragraph here</p>
+      <div className="smooth-scroll-wrapper" ref={scrollWrapRef}>
+        <div className="project__box" ref={contentRef}>
+          <section className='project__wrapper'>
+            {PROJECTS.map((projects, index) => (
+              <div key={index} className='project'>
+                <h1 className='project__title'>// {projects.name} </h1>
+                <img src={projects.img} alt={projects.name} className='project__image' />
               </div>
-            );
-          })}
+            ))}
+          </section>
         </div>
       </div>
     </>
