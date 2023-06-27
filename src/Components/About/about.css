@@ -1,0 +1,26 @@
+.smooth-scroll-wrapper {
+    width: 97%;
+    margin: auto;
+    z-index: 2;
+    top: 20%;
+    left: 0;
+}
+
+.project {
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5em;
+}
+.project__title {
+    width: 100%;
+    text-align: justify;
+    font-size: 92px;
+    text-transform: uppercase;
+}
+.project__image {
+    width: 500px;
+}
