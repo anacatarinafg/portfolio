@@ -45,29 +45,7 @@
 }
 
 .navbar__logotype {
-    position: fixed;
-    top: -45.5%;;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3px;
     text-transform: lowercase;
     font-family: "Cosi Times";
 
-}
-
-.navbar__logotype--shrink {
-    font-size: 18px;
-}
-
-.navbar__logotypeBox.home .navbar__logotype {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1em;
-    font-size: 22px;
-    text-transform: lowercase;
-    font-family: "Cosi Times";
-    z-index: 2;
-    transition: font-size 0.3s;
 }

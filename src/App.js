@@ -7,12 +7,14 @@ import Work from './Components/Work/Work';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Cursor from './Components/Cursor';
+import Loading from './Components/Loading/Loading';
 import './App.css';
 
 const App = () => {
   const location = useLocation();
   const [navbarStyle, setNavbarStyle] = useState({ opacity: 1, transition: 'opacity 0.3s' });
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,19 +36,37 @@ const App = () => {
     };
   }, [prevScrollPos]);
 
+  useEffect(() => {
+    // Simulating a loading delay
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
 
+    return () => {
+      clearTimeout(loadingTimeout);
+    };
+  }, []);
   return (
     <>
-      <Navbar style={navbarStyle} />
-      <Cursor />
-      <AnimatePresence mode='wait'>
-        <Routes location={location} key={location.pathname}>
-          <Route index element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </AnimatePresence>
+      {isLoading ? (
+        <>
+          <Loading />
+          <Cursor />
+        </>
+      ) : (
+        <>
+          <Navbar style={navbarStyle} />
+          <Cursor />
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route index element={<Home />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </AnimatePresence>
+        </>
+      )}
     </>
   );
 };

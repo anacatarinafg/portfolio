@@ -1,0 +1,52 @@
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background-color: #111111;
+    color: #fff6e5;
+    display: flex;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    font-family: "Archivo", sans-serif;
+}
+
+.overlay__info {
+
+}
+
+.overlay__name {
+
+}
+
+.overlay__name h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 92px;
+}
+
+.overlay__job {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.overlay__job p {}
+
+.overlay__click {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+}
+
+.overlay__click span {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.overlay__click p {
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #9c9c9c;
+}

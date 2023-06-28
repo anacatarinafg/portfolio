@@ -146,7 +146,17 @@ const Work = () => {
           <section className='project__wrapper'>
             {PROJECTS.map((projects, index) => (
               <div key={index} className='project'>
-                <h1 className='project__title'>// {projects.name} </h1>
+                <h1 className='project__title'>/ {projects.name} </h1>
+                {/* marquee */}
+                <div class="marquee">
+										<div class="marquee__inner">
+											<span>{projects.name}</span>
+											<span>{projects.name}</span>
+											<span>{projects.name}</span>
+											<span>{projects.name}</span>
+										</div>
+									</div>
+                  {/*  */}
                 <img src={projects.img} alt={projects.name} className='project__image' />
               </div>
             ))}
