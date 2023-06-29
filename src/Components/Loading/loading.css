@@ -13,13 +13,9 @@
     font-family: "Archivo", sans-serif;
 }
 
-.overlay__info {
+.overlay__info {}
 
-}
-
-.overlay__name {
-
-}
+.overlay__name {}
 
 .overlay__name h2 {
     text-transform: uppercase;
