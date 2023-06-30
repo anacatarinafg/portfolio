@@ -1,59 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import React, { useState } from 'react';
 import './work.css';
 import transition from '../../transition';
+import Project from './Project/Project';
+import Modal from './Modal/Modal';
 
 const Work = () => {
-  const scrollWrapRef = useRef(null);
-  const contentRef = useRef(null);
+  const [modal, setModal] = useState({ active: false, index: 0 });
 
-  useEffect(() => {
-    const scrollWrap = scrollWrapRef.current;
-    let offset = 0;
-
-    // Function to perform smooth scrolling effect
-    const smoothScroll = () => {
-      offset += (window.pageYOffset - offset) * 0.04;
-
-      const scroll = `translateY(-${offset}px) translateZ(0)`;
-      scrollWrap.style.transform = scroll;
-
-      requestAnimationFrame(smoothScroll);
-    };
-
-    smoothScroll();
-
-    const content = contentRef.current;
-    let currentPos = window.pageYOffset;
-
-    // Function to perform distortion effect during scrolling
-    const callDistort = () => {
-      const newPos = window.pageYOffset;
-      const diff = newPos - currentPos;
-      const speed = diff * 0.35;
-
-      content.style.transform = `skewY(${speed}deg)`;
-      currentPos = newPos;
-      requestAnimationFrame(callDistort);
-    };
-
-    callDistort();
-
-    // Clean up the animation frames on component unmount
-    return () => {
-      cancelAnimationFrame(smoothScroll);
-      cancelAnimationFrame(callDistort);
-    };
-  }, []);
-
-  useEffect(() => {
-    const scrollWrap = scrollWrapRef.current;
-    const height = scrollWrap.getBoundingClientRect().height - 1;
-    document.body.style.height = Math.floor(height) + 'px';
-  }, []);
-
-  const PROJECTS = [
+  const projects = [
     {
       id: 1,
       name: "Real-time weather",
@@ -64,7 +18,7 @@ const Work = () => {
     {
       id: 2,
       name: 'E-commerce "ecologic memories"',
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "https://i.pinimg.com/564x/4a/ae/54/4aae5468b7280e1c6643f9568e18131e.jpg",
       sourceCode: "https://github.com/anacatarinafg/e-commerce_ecologic-memories",
       webpage: "https://anacatarinafg.github.io/E-commerce_Ecologic_Memories/",
     },
@@ -108,7 +62,7 @@ const Work = () => {
     {
       id: 8,
       name: "Clock",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "https://i.pinimg.com/564x/4a/ae/54/4aae5468b7280e1c6643f9568e18131e.jpg",
       sourceCode: "https://github.com/anacatarinafg/clock",
       webpage: "https://anacatarinafg.github.io/clock/",
 
@@ -124,7 +78,7 @@ const Work = () => {
     {
       id: 10,
       name: "Github search profile",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "https://i.pinimg.com/564x/4a/ae/54/4aae5468b7280e1c6643f9568e18131e.jpg",
       sourceCode: "https://github.com/anacatarinafg/github-profile",
       webpage: "https://anacatarinafg.github.io/github-profile/",
 
@@ -141,28 +95,16 @@ const Work = () => {
 
   return (
     <>
-      <div className="smooth-scroll-wrapper" ref={scrollWrapRef}>
-        <div className="project__box" ref={contentRef}>
-          <section className='project__wrapper'>
-            {PROJECTS.map((projects, index) => (
-              <div key={index} className='project'>
-                <h1 className='project__title'>/ {projects.name} </h1>
-                {/* marquee */}
-                <div class="marquee">
-										<div class="marquee__inner">
-											<span>{projects.name}</span>
-											<span>{projects.name}</span>
-											<span>{projects.name}</span>
-											<span>{projects.name}</span>
-										</div>
-									</div>
-                  {/*  */}
-                <img src={projects.img} alt={projects.name} className='project__image' />
-              </div>
-            ))}
-          </section>
+      <main className='projects__main'>
+        <div className='projects__wrapper'>
+          {projects.map((project, index) => (
+            <Project key={index} index={index} title={project.name} setModal={setModal} />
+          ))}
         </div>
-      </div>
+        <Modal modal={modal} projects={projects} index={modal.index} />
+      </main>
+
+
     </>
   );
 };

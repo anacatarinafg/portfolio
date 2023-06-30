@@ -1,97 +1,75 @@
-/* PROJECTS */
-.smooth-scroll-wrapper {
-    width: 97%;
-    margin: auto;
-    z-index: 2;
-    top: 20%;
-    left: 0;
-    overflow: hidden;
-}
-
-.project {
-    width: 95%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 3em;
+.projects__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative; /* Add position relative */
+	overflow: visible; /* Set overflow to visible */
+  }
+  
+  .project__box {
+	display: flex;
+	width: 100%;
+	padding: 50px 100px;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid rgb(201, 201, 201);
+	transition: all 0.2s linear;
+	position: relative;
+  }
+.project__box:hover {
+	opacity: 0.5;
 }
 .project__title {
-    width: 100%;
-    text-align: justify;
-    font-size: 92px;
-    text-transform: uppercase;
-    position: relative;
+	font-size: 52px;
+	font-size: 500;
+	transition: all 0.2s linear;
 }
-.project__image {
-    width: 500px;
+.project__info {
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.2s linear;
+}
+.project__box:hover .project__title {
+	transform: translateX(-10px);
+}
+.project__box:hover .project__info {
+	transform: translateX(10px);
 }
 
 
-.marquee {
-	position: absolute;
+/* MODAL */
+.modal__wrapper {
+	height: 350px;
+	width: 400px;
+	position: absolute; 
 	overflow: hidden;
-	color: #111111;
 	pointer-events: none;
-	mix-blend-mode: difference;
-}
-
-.marquee__inner {
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	position: relative;
-	-webkit-animation: marquee 35s linear infinite;
-	animation: marquee 25s linear infinite;
-	-webkit-animation-play-state: paused;
-	animation-play-state: paused;
-	opacity: 0;
-	-webkit-transition: opacity 0.1s;
-	transition: opacity 0.1s;
-    overflow: hidden;
-}
-
-.project__title:hover ~ .marquee .marquee__inner {
-	-webkit-animation-play-state: running;
-	animation-play-state: running;
-	opacity: 1;
-	-webkit-transition-duration: 35s;
-	transition-duration: 35s;
-}
-
-.project__title,
-.marquee span {
-	white-space: nowrap;
-	font-size: 8vw;
-    overflow: hidden;
-}
-
-.marquee span {
-	text-transform: uppercase;
-}
-
-@-webkit-keyframes marquee {
-	0% {
-		-webkit-transform: translate3d(var(--move-initial), 0, 0);
-		transform: translate3d(var(--move-initial), 0, 0);
-	}
-	100% {
-		-webkit-transform: translate3d(var(--move-final), 0, 0);
-		transform: translate3d(var(--move-final), 0, 0);
-	}
-}
-
-@keyframes marquee {
-	0% {
-		-webkit-transform: translate3d(var(--move-initial), 0, 0);
-		transform: translate3d(var(--move-initial), 0, 0);
-	}
-	100% {
-		-webkit-transform: translate3d(var(--move-final), 0, 0);
-		transform: translate3d(var(--move-final), 0, 0);
-	}
-}
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+  }
+  
+  .modal__slider {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0; /* Add top: 0 to align with the parent */
+	transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .modal {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .modal__img {
+	width: fit-content;
+	height: auto;
+	transform: rotate(20deg);
+	z-index: 999;
+  }
