@@ -3,8 +3,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: background-color 2.5s ease, color 2.5s ease;
 
 }
+
 .projects__headlines {
     width: 95%;
     margin: auto;
@@ -14,15 +16,19 @@
     padding: 9.5em 0;
 
 }
-.projects__headline, .projects__date {
+
+.projects__headline,
+.projects__date {
     font-size: 152px;
     text-transform: uppercase;
     font-weight: 500;
     font-family: "Roslindale", sans-serif;
 }
+
 .projects__date {
     align-self: flex-end;
 }
+
 .body {
     width: 95%;
     margin: auto;
@@ -84,9 +90,9 @@
 
 /* modal */
 
-.modal__box{
-    height: 350px;
-    width: 400px;
+.modal__box {
+    height: 300px;
+    width: 350px;
     position: absolute;
     background-color: white;
     overflow: hidden;
@@ -135,4 +141,11 @@
 
 .cursor__label {
     background-color: transparent;
+}
+
+
+.background__color {
+    background-color: #111111;
+    color: #fff6e5;
+    transition: all 1s ease;
 }

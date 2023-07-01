@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Project from './Project/Project';
 import Modal from './Modal/Modal';
 import './work.css';
@@ -6,6 +6,7 @@ import transition from '../../transition';
 
 
 const Work = () => {
+  const [backgroundTransition, setBackgroundTransition] = useState(false);
   const [modal, setModal] = useState({ active: false, index: 0 })
   const projects = [
     {
@@ -26,6 +27,14 @@ const Work = () => {
     },
     {
       id: 3,
+      name: 'Learn front-end development',
+      img: "assets/frontend.png",
+      didWhat: "Design & Development",
+      sourceCode: "",
+      webpage: "",
+    },
+    {
+      id: 4,
       name: "Tesla clone",
       img: "assets/tesla-project.png",
       didWhat: "Development",
@@ -33,7 +42,15 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/tesla-frontpage-clone/#solarPanels",
     },
     {
-      id: 4,
+      id: 5,
+      name: "Pomodoro",
+      img: "assets/pomodoro.png",
+      didWhat: "Design & Development",
+      sourceCode: "",
+      webpage: "",
+    },
+    {
+      id: 6,
       name: "NOS Alive clone",
       img: "assets/nos-alive.png",
       didWhat: "Development",
@@ -41,7 +58,31 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/nos-alive-clone/",
     },
     {
-      id: 5,
+      id: 7,
+      name: "Mini e-commerce",
+      img: "",
+      didWhat: "Design & Development",
+      sourceCode: "",
+      webpage: "",
+    },
+    {
+      id: 8,
+      name: "Archived photos",
+      img: "assets/gallery.png",
+      didWhat: "Design & Development",
+      sourceCode: "",
+      webpage: "",
+    },
+    {
+      id: 9,
+      name: "Horizontal scrolling",
+      img: "assets/horizontal.png",
+      didWhat: "Design & Development",
+      sourceCode: "",
+      webpage: "",
+    },
+    {
+      id: 10,
       name: "Solar system",
       img: "assets/planets.png",
       didWhat: "Development",
@@ -49,7 +90,15 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/solar-system/index.html",
     },
     {
-      id: 6,
+      id: 11,
+      name: "Movie & series",
+      img: "assets/movie.png",
+      didWhat: "Development",
+      sourceCode: "",
+      webpage: "",
+    },
+    {
+      id: 12,
       name: "Todo",
       img: "assets/todo-app.png",
       didWhat: "Design & Development",
@@ -58,7 +107,7 @@ const Work = () => {
 
     },
     {
-      id: 7,
+      id: 13,
       name: "Calculator",
       img: "assets/calculator.png",
       didWhat: "Design & Development",
@@ -67,7 +116,7 @@ const Work = () => {
 
     },
     {
-      id: 8,
+      id: 14,
       name: "Clock",
       img: "assets/watch.png",
       didWhat: "Design & Development",
@@ -76,7 +125,7 @@ const Work = () => {
 
     },
     {
-      id: 9,
+      id: 15,
       name: "Dictionary",
       img: "assets/dictionary.png",
       didWhat: "Design & Development",
@@ -85,7 +134,7 @@ const Work = () => {
 
     },
     {
-      id: 10,
+      id: 16,
       name: "Github search profile",
       img: "assets/githubprofile.png",
       didWhat: "Design & Development",
@@ -94,7 +143,7 @@ const Work = () => {
 
     },
     {
-      id: 10,
+      id: 17,
       name: "Gradient generator",
       img: "assets/gradient.jpg",
       didWhat: "Design & Development",
@@ -104,20 +153,39 @@ const Work = () => {
     },
   ];
 
-  return (
 
+  useEffect(() => {
+    const changeBackgroundColor = () => {
+      if (window.scrollY > window.innerHeight / 2) {
+        setBackgroundTransition(true);
+      } else {
+        setBackgroundTransition(false);
+      }
+    };
+
+    window.addEventListener("scroll", changeBackgroundColor);
+    return () => {
+      window.removeEventListener("scroll", changeBackgroundColor);
+    };
+  }, []);
+
+  return (
     <>
-      <main className="main">
-        <div className='projects__headlines'>
-          <h1 className='projects__headline'>Projects</h1>
-          <span className='projects__date'>2022&2023</span>
+      <main className={`main ${backgroundTransition ? "background__color" : ""}`}>
+        <div className="projects__headlines">
+          <h1 className="projects__headline">Projects</h1>
+          <span className="projects__date">2022&2023</span>
         </div>
         <div className="body">
-          {
-            projects.map((project, index) => {
-              return <Project index={index} name={project.name} didWhat={project.didWhat} setModal={setModal} key={index} />
-            })
-          }
+          {projects.map((project, index) => (
+            <Project
+              index={index}
+              name={project.name}
+              didWhat={project.didWhat}
+              setModal={setModal}
+              key={index}
+            />
+          ))}
         </div>
         <Modal modal={modal} projects={projects} />
       </main>
