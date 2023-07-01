@@ -1,15 +1,12 @@
-import React from 'react';
+'use client';
+import React from 'react'
+import '../work.css';
 
-const Project = ({ index, title, setModal }) => {
-  return (
-    <div
-      className='project__box'
-      onMouseEnter={() => { setModal({ active: true, index }) }} onMouseLeave={() => { setModal({ active: false, index }) }}
-    >
-      <h2 className='project__title'>{title}</h2>
-      <p className='project__info'>Design & development</p>
-    </div>
-  );
-};
-
-export default Project;
+export default function index({ index, name, didWhat, setModal }) {
+    return (
+      <div onMouseEnter={() => { setModal({ active: true, index }) }} onMouseLeave={() => { setModal({ active: false, index }) }} className="project">
+        <h2 className="project__name">{name}</h2>
+        <p className="project__workIn">{didWhat}</p>
+      </div>
+    )
+  }
