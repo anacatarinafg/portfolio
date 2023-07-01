@@ -11,7 +11,7 @@ const Work = () => {
     {
       id: 1,
       name: "Real-time weather",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/weather-app.png",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/weather-app",
       webpage: "https://anacatarinafg.github.io/weather-app/#/current-location",
@@ -19,7 +19,7 @@ const Work = () => {
     {
       id: 2,
       name: 'E-commerce "ecologic memories"',
-      img: "https://i.pinimg.com/564x/4a/ae/54/4aae5468b7280e1c6643f9568e18131e.jpg",
+      img: "assets/ecologic-memories.png",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/e-commerce_ecologic-memories",
       webpage: "https://anacatarinafg.github.io/E-commerce_Ecologic_Memories/",
@@ -27,7 +27,7 @@ const Work = () => {
     {
       id: 3,
       name: "Tesla clone",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/tesla-project.png",
       didWhat: "Development",
       sourceCode: "https://github.com/anacatarinafg/tesla-frontpage-clone/tree/gh-pages",
       webpage: "https://anacatarinafg.github.io/tesla-frontpage-clone/#solarPanels",
@@ -35,7 +35,7 @@ const Work = () => {
     {
       id: 4,
       name: "NOS Alive clone",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/nos-alive.png",
       didWhat: "Development",
       sourceCode: "https://github.com/anacatarinafg/nos-alive-clone",
       webpage: "https://anacatarinafg.github.io/nos-alive-clone/",
@@ -43,7 +43,7 @@ const Work = () => {
     {
       id: 5,
       name: "Solar system",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/planets.png",
       didWhat: "Development",
       sourceCode: "https://github.com/anacatarinafg/solar-system",
       webpage: "https://anacatarinafg.github.io/solar-system/index.html",
@@ -51,7 +51,7 @@ const Work = () => {
     {
       id: 6,
       name: "Todo",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/todo-app.png",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/Todo",
       webpage: "https://anacatarinafg.github.io/Todo/",
@@ -60,7 +60,7 @@ const Work = () => {
     {
       id: 7,
       name: "Calculator",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/calculator.png",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/simple-calculator",
       webpage: "https://anacatarinafg.github.io/simple-calculator/",
@@ -69,7 +69,7 @@ const Work = () => {
     {
       id: 8,
       name: "Clock",
-      img: "https://i.pinimg.com/564x/4a/ae/54/4aae5468b7280e1c6643f9568e18131e.jpg",
+      img: "assets/watch.png",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/clock",
       webpage: "https://anacatarinafg.github.io/clock/",
@@ -78,7 +78,7 @@ const Work = () => {
     {
       id: 9,
       name: "Dictionary",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/dictionary.png",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/dictionary",
       webpage: "https://anacatarinafg.github.io/dictionary/",
@@ -87,7 +87,7 @@ const Work = () => {
     {
       id: 10,
       name: "Github search profile",
-      img: "https://i.pinimg.com/564x/4a/ae/54/4aae5468b7280e1c6643f9568e18131e.jpg",
+      img: "assets/githubprofile.png",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/github-profile",
       webpage: "https://anacatarinafg.github.io/github-profile/",
@@ -96,7 +96,7 @@ const Work = () => {
     {
       id: 10,
       name: "Gradient generator",
-      img: "https://i.pinimg.com/564x/e7/0f/0a/e70f0a7055fc89b1a97669fc988b26aa.jpg",
+      img: "assets/gradient.jpg",
       didWhat: "Design & Development",
       sourceCode: "https://github.com/anacatarinafg/gradient-generator",
       webpage: "https://anacatarinafg.github.io/gradient-generator/",
