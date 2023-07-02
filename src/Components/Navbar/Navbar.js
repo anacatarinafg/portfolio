@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar = ({ style }) => {
 
+
   return (
     <>
-      <nav className="navbar" style={style}>
+      <nav className="navbar" style={style} >
         <div className='navbar__wrapper'>
           <div className='navbar__left'>
             <ul className='navbar__list'>

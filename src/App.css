@@ -40,23 +40,10 @@ body {
   background-color: #fff6e5;
   color: #111111;
   font-family: "Roslindale", "Helvetica Ne";
-  animation: changeBackground 2.5s ease;
   cursor: none;
 }
 
-@keyframes changeBackground {
-  /* Define the keyframes for the background color transition */
-  from {
-    /* Define the initial state */
-    background-color: #fff6e5;
-    color: #111111;
-  }
-  to {
-    /* Define the final state */
-    background-color: #111111;
-    color: #fff6e5;
-  }
-}
+
 
 
 #cursor {

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Project from './Project/Project';
 import Modal from './Modal/Modal';
 import './work.css';
@@ -14,6 +16,7 @@ const Work = () => {
       name: "Real-time weather",
       img: "assets/weather-app.png",
       didWhat: "Design & Development",
+      color: "#1F1F1F",
       sourceCode: "https://github.com/anacatarinafg/weather-app",
       webpage: "https://anacatarinafg.github.io/weather-app/#/current-location",
     },
@@ -22,6 +25,7 @@ const Work = () => {
       name: 'E-commerce "ecologic memories"',
       img: "assets/ecologic-memories.png",
       didWhat: "Design & Development",
+      color: "#FF6B35",
       sourceCode: "https://github.com/anacatarinafg/e-commerce_ecologic-memories",
       webpage: "https://anacatarinafg.github.io/E-commerce_Ecologic_Memories/",
     },
@@ -30,6 +34,7 @@ const Work = () => {
       name: 'Learn front-end development',
       img: "assets/frontend.png",
       didWhat: "Design & Development",
+      color: "#004E89",
       sourceCode: "",
       webpage: "",
     },
@@ -38,6 +43,7 @@ const Work = () => {
       name: "Tesla clone",
       img: "assets/tesla-project.png",
       didWhat: "Development",
+      color: "#242A2E",
       sourceCode: "https://github.com/anacatarinafg/tesla-frontpage-clone/tree/gh-pages",
       webpage: "https://anacatarinafg.github.io/tesla-frontpage-clone/#solarPanels",
     },
@@ -46,6 +52,7 @@ const Work = () => {
       name: "Pomodoro",
       img: "assets/pomodoro.png",
       didWhat: "Design & Development",
+      color: "#DDFF00",
       sourceCode: "",
       webpage: "",
     },
@@ -54,6 +61,7 @@ const Work = () => {
       name: "NOS Alive clone",
       img: "assets/nos-alive.png",
       didWhat: "Development",
+      color: "#4A3A3A",
       sourceCode: "https://github.com/anacatarinafg/nos-alive-clone",
       webpage: "https://anacatarinafg.github.io/nos-alive-clone/",
     },
@@ -62,6 +70,7 @@ const Work = () => {
       name: "Mini e-commerce",
       img: "",
       didWhat: "Design & Development",
+      color: "#D4D1D7",
       sourceCode: "",
       webpage: "",
     },
@@ -69,7 +78,8 @@ const Work = () => {
       id: 8,
       name: "Archived photos",
       img: "assets/gallery.png",
-      didWhat: "Design & Development",
+      didWhat: "Development",
+      color: "#34363A",
       sourceCode: "",
       webpage: "",
     },
@@ -78,6 +88,7 @@ const Work = () => {
       name: "Horizontal scrolling",
       img: "assets/horizontal.png",
       didWhat: "Design & Development",
+      color: "#FFA1E6",
       sourceCode: "",
       webpage: "",
     },
@@ -86,6 +97,7 @@ const Work = () => {
       name: "Solar system",
       img: "assets/planets.png",
       didWhat: "Development",
+      color: "#FFCF63",
       sourceCode: "https://github.com/anacatarinafg/solar-system",
       webpage: "https://anacatarinafg.github.io/solar-system/index.html",
     },
@@ -93,7 +105,8 @@ const Work = () => {
       id: 11,
       name: "Movie & series",
       img: "assets/movie.png",
-      didWhat: "Development",
+      didWhat: "Design & Development",
+      color: "#F50000",
       sourceCode: "",
       webpage: "",
     },
@@ -102,54 +115,54 @@ const Work = () => {
       name: "Todo",
       img: "assets/todo-app.png",
       didWhat: "Design & Development",
+      color: "#FFFACD",
       sourceCode: "https://github.com/anacatarinafg/Todo",
       webpage: "https://anacatarinafg.github.io/Todo/",
-
     },
     {
       id: 13,
       name: "Calculator",
       img: "assets/calculator.png",
       didWhat: "Design & Development",
+      color: "#FFEFD5",
       sourceCode: "https://github.com/anacatarinafg/simple-calculator",
       webpage: "https://anacatarinafg.github.io/simple-calculator/",
-
     },
     {
       id: 14,
       name: "Clock",
       img: "assets/watch.png",
       didWhat: "Design & Development",
+      color: "#E9E9EC",
       sourceCode: "https://github.com/anacatarinafg/clock",
       webpage: "https://anacatarinafg.github.io/clock/",
-
     },
     {
       id: 15,
       name: "Dictionary",
       img: "assets/dictionary.png",
       didWhat: "Design & Development",
+      color: "#F0F8FF",
       sourceCode: "https://github.com/anacatarinafg/dictionary",
       webpage: "https://anacatarinafg.github.io/dictionary/",
-
     },
     {
       id: 16,
       name: "Github search profile",
       img: "assets/githubprofile.png",
       didWhat: "Design & Development",
+      color: "#F5F5F5",
       sourceCode: "https://github.com/anacatarinafg/github-profile",
       webpage: "https://anacatarinafg.github.io/github-profile/",
-
     },
     {
       id: 17,
       name: "Gradient generator",
       img: "assets/gradient.jpg",
       didWhat: "Design & Development",
+      color: "#F0FFF0",
       sourceCode: "https://github.com/anacatarinafg/gradient-generator",
       webpage: "https://anacatarinafg.github.io/gradient-generator/",
-
     },
   ];
 
@@ -169,12 +182,15 @@ const Work = () => {
     };
   }, []);
 
+  useEffect(() => {
+    AOS.init({duration: 2000});
+  }, []);
+
   return (
     <>
       <main className={`main ${backgroundTransition ? "background__color" : ""}`}>
-        <div className="projects__headlines">
-          <h1 className="projects__headline">Projects</h1>
-          <span className="projects__date">2022&2023</span>
+        <div className="projects__headlines" data-aos="slide-right">
+          <h1 className="projects__headline">2022&2023<br></br>Projects</h1>
         </div>
         <div className="body">
           {projects.map((project, index) => (
@@ -182,6 +198,7 @@ const Work = () => {
               index={index}
               name={project.name}
               didWhat={project.didWhat}
+              id={project.id}
               setModal={setModal}
               key={index}
             />

@@ -40,12 +40,17 @@
 
 .navbar__link {}
 
-.navbar__logotypeBox {
-    
-}
+.navbar__logotypeBox {}
 
 .navbar__logotype {
     text-transform: lowercase;
     font-family: "Cosi Times";
 
+}
+
+
+@media (max-width: 768px) {
+    .navbar__logotype {
+        display: none;
+    }
 }

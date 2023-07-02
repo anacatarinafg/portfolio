@@ -1,0 +1,15 @@
+.home {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    pointer-events: none;
+}
+.home h2 {
+    width: 100%;
+    font-size: 192px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+}
