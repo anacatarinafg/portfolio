@@ -1,15 +1,57 @@
 .home {
     width: 95%;
-    height: 100%;
     margin: auto;
     position: relative;
     display: flex;
-    pointer-events: none;
+    flex-direction: column;
 }
-.home h2 {
+
+.home__based {
     width: 100%;
-    font-size: 192px;
+    font-size: 152px;
     text-align: justify;
     font-weight: 400;
     font-family: "Archivo", sans-serif;
 }
+
+.home__job {
+    font-size: 52px;
+    text-align: end;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+
+}
+
+.home__gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.home__photo {
+    width: 500px;
+    margin-top: 150px;
+    margin-left: 300px;
+}
+
+.home__pyramid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 5.5em 0;
+
+}
+
+.home__left,
+.home__right {
+    height: 90vh;
+    font-size: 86px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Archivo", "Helvetica Neue";
+}
+
+.home__left {}
+
+.home__right {}
