@@ -16,7 +16,7 @@ const Contact = () => {
         <section className="contact">
           <article className="contact__headline">
             <p className="contact__text" data-aos="slide-right">
-            For contributions, reach out to me through social media or email. Let's connect and explore collaboration possibilities!
+            Reach out to me through social media or email. Let's connect and explore collaboration possibilities!
             </p>
           </article>
           <article className="contact__info">

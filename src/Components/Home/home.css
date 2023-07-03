@@ -1,14 +1,26 @@
 .home {
-    width: 95%;
-    margin: auto;
-    margin-top: 60px;
     position: relative;
     display: flex;
     flex-direction: column;
+    transition: background-color 2.5s ease, color 2.5s ease;
+}
+
+.background__colorHome {
+    background-color: #53900f;
+    color: #fff6e5;
+    transition: all 1s ease;
 }
 
 .home__based {
-    width: 100%;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home__basedText {
+    display: inline-block;
     font-size: 152px;
     text-align: justify;
     font-weight: 400;
@@ -16,30 +28,32 @@
 }
 
 .home__job {
+    width: 95%;
+    margin: auto;
     font-size: 52px;
     text-align: end;
     font-weight: 400;
     font-family: "Archivo", sans-serif;
-
+    margin-top: 20px;
 }
 
 .home__gallery {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
+
 }
-.home__star {
-    font-size: 500px;
-    font-weight: 300;
-}
+
 .home__photo {
-    width: 500px;
+    width: 400px;
     margin-top: 150px;
     margin-left: 300px;
 }
 
 .home__pyramid {
+    width: 95%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,3 +74,55 @@
 .home__left {}
 
 .home__right {}
+
+
+.home__apresentation {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.home__hello {
+    font-size: 92px;
+    text-align: justify;
+    font-weight: 700;
+    font-family: "Archivo", sans-serif;
+    margin: 0;
+    padding: 2.5em 0 0 0;
+}
+
+
+
+
+.home__linkWrapper {
+    width: 95%;
+    margin: auto;
+    padding: 15.5em 0 0 0;
+}
+
+.home__link {
+    width: 100%;
+    border-top: 1px solid #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.home__linkText,
+.home__iconLink {
+    font-size: 92px;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+    text-transform: uppercase;
+    color: #111111;
+    transition: 250ms;
+}
+
+.home__link:hover .home__iconLink {
+    transform: rotate(-35deg);
+}

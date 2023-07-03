@@ -1,51 +1,139 @@
-import React, { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './home.css';
-import transition from '../../transition';
-
+import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
+import { GrLinkNext } from "react-icons/gr";
+import Sentence from "./Sentence";
+import Typewriter from "typewriter-effect";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./home.css";
+import transition from "../../transition";
 
 const Home = () => {
+  const [backgroundTransition, setBackgroundTransition] = useState(false);
+  const sentence = "Portugal — based".split("");
+
+
+
   useEffect(() => {
     AOS.init({ duration: 3000 });
   }, []);
 
+  useEffect(() => {
+    const changeBackgroundColor = () => {
+      if (window.scrollY > window.innerHeight / 2) {
+        setBackgroundTransition(true);
+      } else {
+        setBackgroundTransition(false);
+      }
+    };
+
+    window.addEventListener("scroll", changeBackgroundColor);
+    return () => {
+      window.removeEventListener("scroll", changeBackgroundColor);
+    };
+  }, []);
+
   return (
-    <div className='home'>
-      <h2 className="home__based" data-aos="flip-left">Portugal — based</h2>
-      <p className="home__job" data-aos="flip-right">junior front—end developer</p>
-      <div className="home__gallery" data-aos="zoom-in">
-        {/* <img src="./assets/metree.jpg" alt="me" className="home__photo" /> */}
-      <span className="home__star">🫧</span>
+    <div className={`home ${backgroundTransition ? "background__colorHome" : ""}`}>
+      <div className="home__based">
+        {sentence.map((letter, index) => (
+          <Sentence key={index}>{letter === " " ? "\u00A0" : letter}</Sentence>
+        ))}
       </div>
 
-      <div className="home__pyramid">
+      <p className="home__job" data-aos="flip-right">
+        <Typewriter
+          options={{
+            strings: ["junior front—end developer"],
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 5000000000,
+          }}
+        />
+      </p>
+
+      <div
+        className={`home__gallery ${backgroundTransition ? "background__colorSecondary" : ""}`}
+        data-aos="zoom-in"
+      >
+        <img src="./assets/ana-goncalves.png" alt="my-logo" className="home__photo"></img>
+      </div>
+
+      <div className={`home__pyramid ${backgroundTransition ? "background__colorPrimary" : ""}`}>
         <div className="home__left">
-          <p data-aos="fade-down" className="home__letter">f</p>
-          <p data-aos="fade-down" className="home__letter">fr</p>
-          <p data-aos="fade-down" className="home__letter">fro</p>
-          <p data-aos="fade-down" className="home__letter">fron</p>
-          <p data-aos="fade-down" className="home__letter">front</p>
-          <p data-aos="fade-down" className="home__letter">front-</p>
-          <p data-aos="fade-down" className="home__letter">front-e</p>
-          <p data-aos="fade-down" className="home__letter">front-en</p>
-          <p data-aos="fade-down" className="home__letter">front-end</p>
+          <p data-aos="fade-down" className="home__letter">
+            f
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            fr
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            fro
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            fron
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            front
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            front-
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            front-e
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            front-en
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            front-end
+          </p>
         </div>
 
         <div className="home__right">
-          <p data-aos="fade-down" className="home__letter">developer</p>
-          <p data-aos="fade-down" className="home__letter">develope</p>
-          <p data-aos="fade-down" className="home__letter">develop</p>
-          <p data-aos="fade-down" className="home__letter">develo</p>
-          <p data-aos="fade-down" className="home__letter">devel</p>
-          <p data-aos="fade-down" className="home__letter">deve</p>
-          <p data-aos="fade-down" className="home__letter">dev</p>
-          <p data-aos="fade-down" className="home__letter">de</p>
-          <p data-aos="fade-down" className="home__letter">d</p>
+          <p data-aos="fade-down" className="home__letter">
+            developer
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            develope
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            develop
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            develo
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            devel
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            deve
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            dev
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            de
+          </p>
+          <p data-aos="fade-down" className="home__letter">
+            d
+          </p>
         </div>
       </div>
-    </div>
 
+      <div className={`home__apresentation ${backgroundTransition ? "" : "background__colorHome"}`}>
+        <h4 className="home__hello">Hello! Glad you scroll down! I'm Ana Gonçalves and this is my portfolio website. Feel free to navigate around and find out more about me.</h4>
+      </div>
+
+      <div className="home__linkWrapper">
+        <Link to="/about" className="home__link">
+          <h2 className="home__linkText">About</h2>
+          <span className="home__iconLink">
+            <GrLinkNext />
+          </span>
+        </Link>
+      </div>
+    </div>
   );
 };
 
