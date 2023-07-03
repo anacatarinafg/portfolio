@@ -1,12 +1,13 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './home.css';
 import transition from '../../transition';
 
+
 const Home = () => {
   useEffect(() => {
-    AOS.init({duration: 2000});
+    AOS.init({ duration: 3000 });
   }, []);
 
   return (
@@ -14,7 +15,8 @@ const Home = () => {
       <h2 className="home__based" data-aos="flip-left">Portugal — based</h2>
       <p className="home__job" data-aos="flip-right">junior front—end developer</p>
       <div className="home__gallery" data-aos="zoom-in">
-        <img src="./assets/me.jpg" alt="me" className="home__photo" />
+        {/* <img src="./assets/metree.jpg" alt="me" className="home__photo" /> */}
+      <span className="home__star">🫧</span>
       </div>
 
       <div className="home__pyramid">
