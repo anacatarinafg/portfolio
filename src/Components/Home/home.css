@@ -3,25 +3,24 @@
     display: flex;
     flex-direction: column;
     transition: background-color 2.5s ease, color 2.5s ease;
-    background-color: #fff6e5; /* Initial background color */
+    background-color: #fff6e5;
+    /* Initial background color */
     color: #111111;
 }
 
-
-
 .background__colorSecondary {
-    background-color: #d9ff00; /* Secondary background color */
+    background-color: #d9ff00;
+    /* Secondary background color */
     color: #111111;
     transition: all 1s ease;
-  }
-  
-  .background__colorPrimary {
-    background-color: #fff6e5; /* Third background color */
+}
+
+.background__colorPrimary {
+    background-color: #fff6e5;
+    /* Third background color */
     color: #111111;
     transition: all 1s ease;
-  }
-
-
+}
 
 .home__based {
     width: 95%;
@@ -54,8 +53,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .home__photo {
@@ -72,7 +69,6 @@
     align-items: center;
     flex-direction: row;
     padding: 5.5em 0;
-
 }
 
 .home__left,
@@ -88,7 +84,6 @@
 
 .home__right {}
 
-
 .home__apresentation {
     width: 95%;
     height: 100vh;
@@ -99,7 +94,6 @@
     flex-wrap: wrap;
     overflow: auto;
     background-color: transparent;
-
 }
 
 .home__hello {
@@ -109,10 +103,6 @@
     font-family: "Archivo", sans-serif;
 }
 
-
-
-
-
 .home__linkWrapper {
     width: 95%;
     margin: auto;
@@ -121,14 +111,11 @@
 
 .home__link {
     width: 100%;
-    border-top: 1px solid #111111;;
+    border-top: 1px solid #111111;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
-
 
 .home__linkText,
 .home__iconLink {
@@ -141,4 +128,71 @@
 
 .home__link:hover .home__iconLink {
     transform: rotate(-35deg);
+}
+
+/* MEDIA */
+
+@media (max-width: 768px) {
+    .home__based {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .home__basedText {
+        font-size: 36px;
+        margin-top: 60px;
+    }
+
+    .home__job {
+        font-size: 22px;
+    }
+
+    .home__photo {
+        width: 200px;
+        margin-top: 150px;
+        margin-left: 0px;
+    }
+
+    .home__pyramid {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5.5em 0;
+    }
+
+    .home__left,
+    .home__right {
+        height: 60vh;
+        font-size: 36px;
+    }
+
+    .home__apresentation {
+        width: 95%;
+        height: auto;
+        margin: auto;
+        flex-wrap: wrap;
+        padding: 0 .5em;
+    }
+
+    .home__hello {
+        font-size: 36px;
+        text-align: justify;
+        font-weight: 500;
+        font-family: "Archivo", sans-serif;
+    }
+
+    .home__linkWrapper {
+        padding: 3.5em 0 0 0;
+    }
+
+    .home__linkText,
+    .home__iconLink {
+        font-size: 36px;
+    }
 }
