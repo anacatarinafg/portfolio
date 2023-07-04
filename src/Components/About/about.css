@@ -1,4 +1,102 @@
+.about__background {
+    background-color: #ffd301;
+}
 
+.background__colorAbout {
+    background-color: #ff5f02;
+    color: #111111;
+    transition: all 1s ease;
+}
+
+.about {
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.about__wrapper {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+}
+
+.about__info {
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.about__apresentation {
+    font-size: 52px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+}
+.about__additionalInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about__additionalInfo span {
+    text-align: justify;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+    border-radius: 25px;
+    border: 1px solid #111111;
+    padding: .5em;
+}
+.about__resume {
+    width: 20%;
+}
+.about__resume p {
+    font-size: 22px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+}
+.firstEmoji {
+    color: #3abff0;
+}
+
+.secondEmoji {
+    color: #b1d394;
+}
+
+.thirdEmoji {
+    color: #ff4802;
+}
+
+.fourthEmoji {
+    color: #03ac46;
+}
+
+.fifthEmoji {
+    color: #808a02;
+}
+
+.sixthEmoji {
+    color: #3f2eff;
+}
+
+
+.about__languages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    margin: 125px 0;
+}
+
+.languages__headline {
+    font-size: 36px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+    padding: 0;
+}
 
 /* TAGCLOUD */
 
@@ -15,4 +113,87 @@
     left: 0;
     font-weight: 600;
     font-size: 36px;
+}
+
+
+/* LINK */
+
+.about__link {
+    width: 100%;
+    border-top: 1px solid #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__linkText,
+.about__iconLink {
+    font-size: 92px;
+    font-weight: 400;
+    font-family: "Archivo", sans-serif;
+    text-transform: uppercase;
+    transition: 250ms;
+}
+
+.about__link:hover .about__iconLink {
+    transform: rotate(-35deg);
+}
+
+
+@media (max-width: 768px) {
+    .about__wrapper {
+        gap: 1.5em;
+    }
+    
+    .about__info {
+        padding: 1em;
+        margin-top: 50px;
+    }
+    
+    .about__apresentation {
+        font-size: 26px;
+    }
+    .about__languages {
+        height: auto;
+        margin-top: 50px;
+    }
+    .about__resume {
+        width: 100%;
+    }
+    .about__resume p {
+        font-size: 22px;
+        text-align: justify;
+        font-weight: 400;
+        font-family: "Archivo", sans-serif;
+    }
+    
+    .languages__headline {
+        padding: 1em;
+        font-size: 22px;
+    }
+    
+    /* TAGCLOUD */
+    
+    .tagcloud__box {
+        width: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+    }
+    
+    .tagcloud {
+        display: inline-block;
+        top: 0;
+        left: 0;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    
+    /* LINK */
+    .about__linkText,
+    .about__iconLink {
+        font-size: 36px;
+    }
 }

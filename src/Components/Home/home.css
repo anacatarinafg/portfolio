@@ -4,20 +4,17 @@
     flex-direction: column;
     transition: background-color 2.5s ease, color 2.5s ease;
     background-color: #fff6e5;
-    /* Initial background color */
     color: #111111;
 }
 
 .background__colorSecondary {
     background-color: #d9ff00;
-    /* Secondary background color */
     color: #111111;
     transition: all 1s ease;
 }
 
 .background__colorPrimary {
     background-color: #fff6e5;
-    /* Third background color */
     color: #111111;
     transition: all 1s ease;
 }
@@ -80,10 +77,6 @@
     font-family: "Archivo", "Helvetica Neue";
 }
 
-.home__left {}
-
-.home__right {}
-
 .home__apresentation {
     width: 95%;
     height: 100vh;
@@ -106,7 +99,7 @@
 .home__linkWrapper {
     width: 95%;
     margin: auto;
-    padding: 15.5em 0 0 0;
+    padding: 5.5em 0 0 0;
 }
 
 .home__link {

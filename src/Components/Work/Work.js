@@ -166,6 +166,9 @@ const Work = () => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const changeBackgroundColor = () => {
@@ -183,13 +186,13 @@ const Work = () => {
   }, []);
 
   useEffect(() => {
-    AOS.init({duration: 2000});
+    AOS.init({ duration: 2000 });
   }, []);
 
   return (
     <>
       <main className={`main ${backgroundTransition ? "background__color" : ""}`}>
-        <div className="projects__headlines" data-aos="slide-right">
+        <div className="projects__headlines" data-aos="flip-right">
           <h1 className="projects__headline">2022&2023<br></br>Projects</h1>
         </div>
         <div className="body">

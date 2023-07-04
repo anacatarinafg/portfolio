@@ -7,7 +7,7 @@ import './contact.css';
 const Contact = () => {
 
   useEffect(() => {
-    AOS.init({duration: 1000});
+    AOS.init({duration: 2000});
   }, []);
 
   return (

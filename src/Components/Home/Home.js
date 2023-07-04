@@ -14,6 +14,7 @@ const Home = () => {
 
 
 
+
   useEffect(() => {
     AOS.init({ duration: 3000 });
   }, []);
@@ -21,15 +22,17 @@ const Home = () => {
   useEffect(() => {
     const changeBackgroundColor = () => {
       const homeContainer = document.querySelector(".home");
-      if (window.scrollY > window.innerHeight) {
-        homeContainer.classList.add("background__colorSecondary");
-      } else {
-        homeContainer.classList.remove("background__colorSecondary");
-      }
-      if (window.scrollY > window.innerHeight * 1.5) {
-        homeContainer.classList.add("background__colorPrimary");
-      } else {
-        homeContainer.classList.remove("background__colorPrimary");
+      if (homeContainer) {
+        if (window.scrollY > window.innerHeight) {
+          homeContainer.classList.add("background__colorSecondary");
+        } else {
+          homeContainer.classList.remove("background__colorSecondary");
+        }
+        if (window.scrollY > window.innerHeight * 1.5) {
+          homeContainer.classList.add("background__colorPrimary");
+        } else {
+          homeContainer.classList.remove("background__colorPrimary");
+        }
       }
     };
 

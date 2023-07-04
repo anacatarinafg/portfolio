@@ -84,21 +84,7 @@ button {
   all: unset;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
 
-::-webkit-scrollbar-track {
-  border-radius: 8px;
-  background-color: #fff6e5;
-  border: 1px solid #fff6e5;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background-color: #363636;
-}
 
 .slide-in {
   position: fixed;
