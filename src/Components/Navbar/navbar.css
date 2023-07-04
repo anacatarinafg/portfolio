@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     background-color: transparent;
+    z-index: 3;
 }
 .navbar__wrapper {
     width: 95%;

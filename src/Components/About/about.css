@@ -18,7 +18,7 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 3.5em;
+    gap: 1.5em;
 }
 
 .about__info {
@@ -74,10 +74,6 @@
 }
 
 .fifthEmoji {
-    color: #808a02;
-}
-
-.sixthEmoji {
     color: #3f2eff;
 }
 
@@ -85,13 +81,28 @@
 .about__languages {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: auto;
     margin: 125px 0;
 }
 
 .languages__headline {
     font-size: 36px;
+    text-align: justify;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Archivo", sans-serif;
+    padding: 0 0 1em 0;
+}
+.about__secondWrapper {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.about__moreLangInfo {
+    width: 100%;
+    font-size: 26px;
     text-align: justify;
     font-weight: 400;
     font-family: "Archivo", sans-serif;
@@ -124,6 +135,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -50px;
 }
 
 .about__linkText,
@@ -171,6 +183,20 @@
         padding: 1em;
         font-size: 22px;
     }
+
+    .about__secondWrapper {
+        flex-direction: column;
+    }
+    
+    .about__moreLangInfo {
+        width: 95%;
+        font-size: 22px;
+        text-align: justify;
+        font-weight: 400;
+        font-family: "Archivo", sans-serif;
+        padding: 1em;
+    }
+    
     
     /* TAGCLOUD */
     

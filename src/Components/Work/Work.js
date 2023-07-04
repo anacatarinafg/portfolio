@@ -35,7 +35,7 @@ const Work = () => {
       img: "./assets/frontend.png",
       didWhat: "Design & Development",
       color: "#004E89",
-      sourceCode: "",
+      sourceCode: "https://github.com/anacatarinafg/learn-frontend-development",
       webpage: "",
     },
     {
@@ -53,8 +53,8 @@ const Work = () => {
       img: "./assets/pomodoro.png",
       didWhat: "Design & Development",
       color: "#DDFF00",
-      sourceCode: "",
-      webpage: "",
+      sourceCode: "https://github.com/anacatarinafg/pomodoro",
+      webpage: "https://anacatarinafg.github.io/pomodoro/",
     },
     {
       id: 6,
@@ -71,7 +71,7 @@ const Work = () => {
       img: "./assets/mini-ecommerce.png",
       didWhat: "Development",
       color: "#03ac46",
-      sourceCode: "",
+      sourceCode: "https://github.com/anacatarinafg/e-commerce-electronic",
       webpage: "",
     },
     {
@@ -80,8 +80,8 @@ const Work = () => {
       img: "./assets/gallery.png",
       didWhat: "Development",
       color: "#ff4802",
-      sourceCode: "",
-      webpage: "",
+      sourceCode: "https://github.com/anacatarinafg/archived-photos",
+      webpage: "https://anacatarinafg.github.io/archived-photos/",
     },
     {
       id: 9,
@@ -89,8 +89,8 @@ const Work = () => {
       img: "./assets/horizontal.png",
       didWhat: "Design & Development",
       color: "#FFA1E6",
-      sourceCode: "",
-      webpage: "",
+      sourceCode: "https://github.com/anacatarinafg/horizontal-scroll",
+      webpage: "https://anacatarinafg.github.io/horizontal-scroll/",
     },
     {
       id: 10,
@@ -107,7 +107,7 @@ const Work = () => {
       img: "./assets/movie.png",
       didWhat: "Design & Development",
       color: "#F50000",
-      sourceCode: "",
+      sourceCode: "https://github.com/anacatarinafg/movie-app",
       webpage: "",
     },
     {
@@ -193,7 +193,7 @@ const Work = () => {
     <>
       <main className={`main ${backgroundTransition ? "background__color" : ""}`}>
         <div className="projects__headlines" data-aos="flip-right">
-          <h1 className="projects__headline">2022&2023<br></br>Projects</h1>
+          <h1 className="projects__headline"><span>2022—2023</span>selected projects</h1>
         </div>
         <div className="body">
           {projects.map((project, index) => (

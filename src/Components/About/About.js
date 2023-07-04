@@ -68,7 +68,7 @@ const About = () => {
         <div className="about__wrapper">
           <div className='about__info'>
             <p className='about__apresentation' data-aos="fade-down">
-              I'm Ana Gonçalves.<span className="firstEmoji">✺</span> I'm a junior front-end developer<span className='secondEmoji'>✹</span> with a deep passion for creating visually appealing and user-friendly webpages.<span className='thirdEmoji'>✷</span>My practice encompasses a blend of technical expertise, creative thinking, and a drive for innovation.<span className='fourthEmoji'>✷</span> Through a combination of insight, strategy, and craftsmanship, I strive to create future-facing web experiences that connect with users<span className='fifthEmoji'>❥</span>, foster meaningful interactions, and drive positive change.<span className='sixthEmoji'>✳︎</span>
+              I'm Ana Gonçalves.<span className="firstEmoji">✺</span> I'm a junior front—end developer<span className='secondEmoji'>✹</span> with a deep passion for creating visually appealing and user-friendly webpages.<span className='thirdEmoji'>✷</span>My practice encompasses a blend of technical expertise, creative thinking, and a drive for innovation.<span className='fourthEmoji'>✷</span> Through a combination of insight, strategy, and craftsmanship, I strive to create future-facing web experiences that connect with users, foster meaningful interactions, and drive positive change.<span className='fifthEmoji'>✳︎</span>
             </p>
             <div className='about__additionalInfo'>
               <span data-aos="fade-down">Passionate</span>
@@ -76,15 +76,21 @@ const About = () => {
               <span data-aos="fade-down">Flexible</span>
             </div>
             <div className='about__resume'>
-              <p data-aos="fade-down">I’m a junior front-end developer that creates digital experiences. I am a person who likes challenges and undertakes the most advanced projects for learning and commitment.</p>
+              <p data-aos="fade-down">I’m a junior front—end developer that creates digital experiences. I am a person who likes challenges and undertakes the most advanced projects for learning and commitment.</p>
             </div>
           </div>
           <div className='about__languages'>
-            <h2 className='languages__headline' data-aos="fade-down">Development skill</h2>
-            {/* TAGCLOUD */}
-            <div class="tagcloud__box">
-              <span class="tagcloud" data-aos="fade-down"></span>
+            <h2 className='languages__headline' data-aos="fade-down">Development skills</h2>
+            <div className='about__secondWrapper'>
+              <div className='about__moreLangInfo' data-aos="fade-down">
+                <p>— I find immense pleasure in the art of creating and recreating webpages that resonate deeply with me, immersing myself in the intricate world of web design where I can channel my passion to craft captivating online experiences that truly capture my heart.</p>
+              </div>
+              {/* TAGCLOUD */}
+              <div class="tagcloud__box">
+                <span class="tagcloud" data-aos="fade-down"></span>
+              </div>
             </div>
+
           </div>
           <Link to="/work" className="about__link">
             <h2 className="about__linkText">Work</h2>
