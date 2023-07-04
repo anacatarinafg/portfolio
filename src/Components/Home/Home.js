@@ -20,10 +20,16 @@ const Home = () => {
 
   useEffect(() => {
     const changeBackgroundColor = () => {
-      if (window.scrollY > window.innerHeight / 2) {
-        setBackgroundTransition(true);
+      const homeContainer = document.querySelector(".home");
+      if (window.scrollY > window.innerHeight) {
+        homeContainer.classList.add("background__colorSecondary");
       } else {
-        setBackgroundTransition(false);
+        homeContainer.classList.remove("background__colorSecondary");
+      }
+      if (window.scrollY > window.innerHeight * 1.5) {
+        homeContainer.classList.add("background__colorPrimary");
+      } else {
+        homeContainer.classList.remove("background__colorPrimary");
       }
     };
 
@@ -121,8 +127,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={`home__apresentation ${backgroundTransition ? "" : "background__colorHome"}`}>
-        <h4 className="home__hello">Hello! Glad you scroll down! I'm Ana Gonçalves and this is my portfolio website. Feel free to navigate around and find out more about me.</h4>
+      <div className="home__apresentation">
+        <h4 className="home__hello">Hey there! I'm Ana Gonçalves and I'm thrilled that you've taken the time to scroll down. Welcome to my portfolio website. Feel free to explore and delve deeper into who I am. Get ready to uncover more about me and my work!</h4>
       </div>
 
       <div className="home__linkWrapper">
