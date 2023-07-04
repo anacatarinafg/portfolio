@@ -125,7 +125,7 @@
 
 /* MEDIA */
 
-@media (max-width: 768px) {
+@media (max-width: 1125px) {
     .home__based {
         width: 95%;
         margin: auto;

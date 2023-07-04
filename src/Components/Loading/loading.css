@@ -46,3 +46,32 @@
     font-size: 22px;
     color: #9c9c9c;
 }
+
+
+@media (max-width: 1125px) {
+    .overlay {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        background-color: #111111;
+        color: #fff6e5;
+        display: flex;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        font-family: "Archivo", sans-serif;
+    }
+    
+    .overlay__info {}
+    
+    .overlay__name {}
+    
+    .overlay__name h2 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 36px;
+    }
+    
+}

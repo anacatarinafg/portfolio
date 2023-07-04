@@ -14,7 +14,7 @@ const Work = () => {
     {
       id: 1,
       name: "Real-time weather",
-      img: "assets/weather-app.png",
+      img: "./assets/weather-app.png",
       didWhat: "Design & Development",
       color: "#1F1F1F",
       sourceCode: "https://github.com/anacatarinafg/weather-app",
@@ -23,7 +23,7 @@ const Work = () => {
     {
       id: 2,
       name: 'E-commerce "ecologic memories"',
-      img: "assets/ecologic-memories.png",
+      img: "./assets/ecologic-memories.png",
       didWhat: "Design & Development",
       color: "#FF6B35",
       sourceCode: "https://github.com/anacatarinafg/e-commerce_ecologic-memories",
@@ -32,7 +32,7 @@ const Work = () => {
     {
       id: 3,
       name: 'Learn front-end development',
-      img: "assets/frontend.png",
+      img: "./assets/frontend.png",
       didWhat: "Design & Development",
       color: "#004E89",
       sourceCode: "",
@@ -41,7 +41,7 @@ const Work = () => {
     {
       id: 4,
       name: "Tesla clone",
-      img: "assets/tesla-project.png",
+      img: "./assets/tesla-project.png",
       didWhat: "Development",
       color: "#3abff0",
       sourceCode: "https://github.com/anacatarinafg/tesla-frontpage-clone/tree/gh-pages",
@@ -50,7 +50,7 @@ const Work = () => {
     {
       id: 5,
       name: "Pomodoro",
-      img: "assets/pomodoro.png",
+      img: "./assets/pomodoro.png",
       didWhat: "Design & Development",
       color: "#DDFF00",
       sourceCode: "",
@@ -59,7 +59,7 @@ const Work = () => {
     {
       id: 6,
       name: "NOS Alive clone",
-      img: "assets/nos-alive.png",
+      img: "./assets/nos-alive.png",
       didWhat: "Development",
       color: "#ffd301",
       sourceCode: "https://github.com/anacatarinafg/nos-alive-clone",
@@ -68,8 +68,8 @@ const Work = () => {
     {
       id: 7,
       name: "Mini e-commerce",
-      img: "",
-      didWhat: "Design & Development",
+      img: "./assets/mini-ecommerce.png",
+      didWhat: "Development",
       color: "#03ac46",
       sourceCode: "",
       webpage: "",
@@ -77,7 +77,7 @@ const Work = () => {
     {
       id: 8,
       name: "Archived photos",
-      img: "assets/gallery.png",
+      img: "./assets/gallery.png",
       didWhat: "Development",
       color: "#ff4802",
       sourceCode: "",
@@ -86,7 +86,7 @@ const Work = () => {
     {
       id: 9,
       name: "Horizontal scrolling",
-      img: "assets/horizontal.png",
+      img: "./assets/horizontal.png",
       didWhat: "Design & Development",
       color: "#FFA1E6",
       sourceCode: "",
@@ -95,7 +95,7 @@ const Work = () => {
     {
       id: 10,
       name: "Solar system",
-      img: "assets/planets.png",
+      img: "./assets/planets.png",
       didWhat: "Development",
       color: "#f511c8",
       sourceCode: "https://github.com/anacatarinafg/solar-system",
@@ -104,7 +104,7 @@ const Work = () => {
     {
       id: 11,
       name: "Movie & series",
-      img: "assets/movie.png",
+      img: "./assets/movie.png",
       didWhat: "Design & Development",
       color: "#F50000",
       sourceCode: "",
@@ -113,7 +113,7 @@ const Work = () => {
     {
       id: 12,
       name: "Todo",
-      img: "assets/todo-app.png",
+      img: "./assets/todo-app.png",
       didWhat: "Design & Development",
       color: "#3f2eff",
       sourceCode: "https://github.com/anacatarinafg/Todo",
@@ -122,7 +122,7 @@ const Work = () => {
     {
       id: 13,
       name: "Calculator",
-      img: "assets/calculator.png",
+      img: "./assets/calculator.png",
       didWhat: "Design & Development",
       color: "#41fab9",
       sourceCode: "https://github.com/anacatarinafg/simple-calculator",
@@ -131,7 +131,7 @@ const Work = () => {
     {
       id: 14,
       name: "Clock",
-      img: "assets/watch.png",
+      img: "./assets/watch.png",
       didWhat: "Design & Development",
       color: "#d9ff00",
       sourceCode: "https://github.com/anacatarinafg/clock",
@@ -140,7 +140,7 @@ const Work = () => {
     {
       id: 15,
       name: "Dictionary",
-      img: "assets/dictionary.png",
+      img: "./assets/dictionary.png",
       didWhat: "Design & Development",
       color: "#F0F8FF",
       sourceCode: "https://github.com/anacatarinafg/dictionary",
@@ -149,7 +149,7 @@ const Work = () => {
     {
       id: 16,
       name: "Github search profile",
-      img: "assets/githubprofile.png",
+      img: "./assets/githubprofile.png",
       didWhat: "Design & Development",
       color: "#ff4802",
       sourceCode: "https://github.com/anacatarinafg/github-profile",
@@ -158,7 +158,7 @@ const Work = () => {
     {
       id: 17,
       name: "Gradient generator",
-      img: "assets/gradient.jpg",
+      img: "./assets/gradient.jpg",
       didWhat: "Design & Development",
       color: "#ffd301",
       sourceCode: "https://github.com/anacatarinafg/gradient-generator",
@@ -202,6 +202,7 @@ const Work = () => {
               name={project.name}
               didWhat={project.didWhat}
               id={project.id}
+              link={project.webpage}
               setModal={setModal}
               key={index}
             />

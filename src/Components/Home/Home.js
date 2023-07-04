@@ -86,16 +86,16 @@ const Home = () => {
             front
           </p>
           <p data-aos="fade-down" className="home__letter">
-            front-
+            front—
           </p>
           <p data-aos="fade-down" className="home__letter">
-            front-e
+            front—e
           </p>
           <p data-aos="fade-down" className="home__letter">
-            front-en
+            front—en
           </p>
           <p data-aos="fade-down" className="home__letter">
-            front-end
+            front—end
           </p>
         </div>
 

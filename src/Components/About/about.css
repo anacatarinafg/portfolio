@@ -140,7 +140,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1125px) {
     .about__wrapper {
         gap: 1.5em;
     }
