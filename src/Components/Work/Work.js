@@ -31,15 +31,6 @@ const Work = () => {
     },
     {
       id: 3,
-      name: 'Learn front-end development',
-      img: "./portfolio/assets/frontend.png",
-      didWhat: "Design & Development",
-      color: "#004E89",
-      sourceCode: "https://github.com/anacatarinafg/learn-frontend-development",
-      webpage: "",
-    },
-    {
-      id: 4,
       name: "Tesla clone",
       img: "./portfolio/assets/tesla-project.png",
       didWhat: "Development",
@@ -48,7 +39,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/tesla-frontpage-clone/#solarPanels",
     },
     {
-      id: 5,
+      id: 4,
       name: "Pomodoro",
       img: "./portfolio/assets/pomodoro.png",
       didWhat: "Design & Development",
@@ -57,7 +48,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/pomodoro/",
     },
     {
-      id: 6,
+      id: 5,
       name: "NOS Alive clone",
       img: "./portfolio/assets/nos-alive.png",
       didWhat: "Development",
@@ -66,16 +57,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/nos-alive-clone/",
     },
     {
-      id: 7,
-      name: "Mini e-commerce",
-      img: "./portfolio/assets/mini-ecommerce.png",
-      didWhat: "Development",
-      color: "#03ac46",
-      sourceCode: "https://github.com/anacatarinafg/e-commerce-electronic",
-      webpage: "",
-    },
-    {
-      id: 8,
+      id: 6,
       name: "Archived photos",
       img: "./portfolio/assets/gallery.png",
       didWhat: "Development",
@@ -84,7 +66,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/archived-photos/",
     },
     {
-      id: 9,
+      id: 7,
       name: "Horizontal scrolling",
       img: "./portfolio/assets/horizontal.png",
       didWhat: "Design & Development",
@@ -93,7 +75,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/horizontal-scroll/",
     },
     {
-      id: 10,
+      id: 8,
       name: "Solar system",
       img: "./portfolio/assets/planets.png",
       didWhat: "Development",
@@ -102,16 +84,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/solar-system/index.html",
     },
     {
-      id: 11,
-      name: "Movie & series",
-      img: "./portfolio/assets/movie.png",
-      didWhat: "Design & Development",
-      color: "#F50000",
-      sourceCode: "https://github.com/anacatarinafg/movie-app",
-      webpage: "",
-    },
-    {
-      id: 12,
+      id: 9,
       name: "Todo",
       img: "./portfolio/assets/todo-app.png",
       didWhat: "Design & Development",
@@ -120,7 +93,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/Todo/",
     },
     {
-      id: 13,
+      id: 10,
       name: "Calculator",
       img: "./portfolio/assets/calculator.png",
       didWhat: "Design & Development",
@@ -129,7 +102,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/simple-calculator/",
     },
     {
-      id: 14,
+      id: 11,
       name: "Clock",
       img: "./portfolio/assets/watch.png",
       didWhat: "Design & Development",
@@ -138,7 +111,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/clock/",
     },
     {
-      id: 15,
+      id: 12,
       name: "Dictionary",
       img: "./portfolio/assets/dictionary.png",
       didWhat: "Design & Development",
@@ -147,7 +120,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/dictionary/",
     },
     {
-      id: 16,
+      id: 13,
       name: "Github search profile",
       img: "./portfolio/assets/githubprofile.png",
       didWhat: "Design & Development",
@@ -156,7 +129,7 @@ const Work = () => {
       webpage: "https://anacatarinafg.github.io/github-profile/",
     },
     {
-      id: 17,
+      id: 14,
       name: "Gradient generator",
       img: "./portfolio/assets/gradient.jpg",
       didWhat: "Design & Development",
