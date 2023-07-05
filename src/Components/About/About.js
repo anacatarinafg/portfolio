@@ -35,31 +35,27 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-    // Set body background color
     document.body.classList.add('about__background');
 
     return () => {
-      // Remove the class when component is unmounted
       document.body.classList.remove('about__background');
     }
   }, []);
 
 
   useEffect(() => {
-    return () => {
-      const container = ".tagcloud";
-      const texts = [
-        "HTML", "CSS", "SASS", "BOOTSTRAP", "TAILWIND", "JAVASCRIPT", "TYPESCRIPT", "REACT", "ANGULAR", "NEXTJS", "GSAP", "JQUERY", "FIGMA", "GIT"
-      ];
+    const container = ".tagcloud";
+    const texts = [
+      "HTML", "CSS", "SASS", "BOOTSTRAP", "TAILWIND", "JAVASCRIPT", "TYPESCRIPT", "REACT", "ANGULAR", "NEXTJS", "GSAP", "JQUERY", "FIGMA", "GIT"
+    ];
 
-      const options = {
-        radius: 300,
-        maxSpeed: "normal",
-        initSpeed: "normal",
-        keep: true,
-      }
-      TagCloud(container, texts, options);
+    const options = {
+      radius: 300,
+      maxSpeed: "normal",
+      initSpeed: "normal",
+      keep: true,
     }
+    TagCloud(container, texts, options);
   }, []);
 
   return (
