@@ -11,7 +11,7 @@ const Navbar = ({ style }) => {
         <div className='navbar__wrapper'>
           <div className='navbar__left'>
             <ul className='navbar__list'>
-              <li className='navbar__item'><Link to="/">Index</Link></li>
+              <li className='navbar__item'><Link to="/portfolio">Index</Link></li>
               <li className='navbar__item'><Link to="/about">About</Link></li>
             </ul>
           </div>
