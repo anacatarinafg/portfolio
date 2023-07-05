@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5d8a18d3.css",
-    "main.js": "/portfolio/static/js/main.0bfb0dfc.js",
+    "main.js": "/portfolio/static/js/main.c1fc5522.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Canopee.otf": "/portfolio/static/media/Canopee.ce0f273acc44741243a0.otf",
     "static/media/Roslindale-DisplayCondensedMedium-Testing.woff": "/portfolio/static/media/Roslindale-DisplayCondensedMedium-Testing.42f91d891d661b5366c2.woff",
     "static/media/MAK.woff": "/portfolio/static/media/MAK.0f20b8b334bcf832b75c.woff",
+    "static/media/ana-goncalves.png": "/portfolio/static/media/ana-goncalves.b34d80a2f6d9d3f7c059.png",
     "static/media/CosiTimes-Bold.ttf": "/portfolio/static/media/CosiTimes-Bold.03f0090a7fb755241772.ttf",
     "index.html": "/portfolio/index.html",
     "main.5d8a18d3.css.map": "/portfolio/static/css/main.5d8a18d3.css.map",
-    "main.0bfb0dfc.js.map": "/portfolio/static/js/main.0bfb0dfc.js.map",
+    "main.c1fc5522.js.map": "/portfolio/static/js/main.c1fc5522.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d8a18d3.css",
-    "static/js/main.0bfb0dfc.js"
+    "static/js/main.c1fc5522.js"
   ]
 }
