@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./home.css";
 import transition from "../../transition";
+import image from "./ana-goncalves.png";
 
 const Home = () => {
   const [backgroundTransition, setBackgroundTransition] = useState(false);
@@ -65,7 +66,7 @@ const Home = () => {
         className={`home__gallery ${backgroundTransition ? "background__colorSecondary" : ""}`}
         data-aos="zoom-in"
       >
-        <img src="./assets/ana-goncalves.png" alt="my-logo" className="home__photo"></img>
+        <img src={image} alt="my-logo" className="home__photo"></img>
       </div>
 
       <div className={`home__pyramid ${backgroundTransition ? "background__colorPrimary" : ""}`}>
