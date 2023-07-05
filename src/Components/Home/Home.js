@@ -65,7 +65,7 @@ const Home = () => {
         className={`home__gallery ${backgroundTransition ? "background__colorSecondary" : ""}`}
         data-aos="zoom-in"
       >
-        <img src="./assets/ana-goncalves.png" alt="my-logo" className="home__photo"></img>
+        <img src="./portfolio/assets/ana-goncalves.png" alt="my-logo" className="home__photo"></img>
       </div>
 
       <div className={`home__pyramid ${backgroundTransition ? "background__colorPrimary" : ""}`}>
