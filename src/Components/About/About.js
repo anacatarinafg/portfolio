@@ -69,7 +69,7 @@ const About = () => {
             <div className='about__additionalInfo'>
               <span data-aos="fade-down">Passionate</span>
               <span data-aos="fade-down">Dedicated</span>
-              <span data-aos="fade-down">Flexible</span>
+              <span data-aos="fade-down">Resilient</span>
             </div>
             <div className='about__resume'>
               <p data-aos="fade-down">I’m a junior front—end developer that creates digital experiences. I am a person who likes challenges and undertakes the most advanced projects for learning and commitment.</p>
