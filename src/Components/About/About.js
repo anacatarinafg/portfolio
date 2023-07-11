@@ -64,7 +64,7 @@ const About = () => {
         <div className="about__wrapper">
           <div className='about__info'>
             <p className='about__apresentation' data-aos="fade-down">
-              I'm Ana Gonçalves.<span className="firstEmoji">✺</span> I'm a junior front—end developer<span className='secondEmoji'>✹</span> with a deep passion for creating visually appealing and user-friendly webpages.<span className='thirdEmoji'>✷</span> In my projects, I combine technical skills, imaginative ideas, and a passion for innovation.<span className='fourthEmoji'>✷</span> By using my understanding, strategic thinking, and attention to detail, I aim to develop modern websites that engage users, encourage meaningful interactions, and bring about positive transformations.<span className='fifthEmoji'>✳︎</span>
+              I'm Ana Gonçalves.<span className="firstEmoji">✺</span> I'm a junior front—end developer<span className='secondEmoji'>✹</span> with a deep passion for creating visually appealing and user-friendly webpages.<span className='thirdEmoji'>✷</span> In my projects, I combine technical skills, imaginative ideas, and a passion for innovation.<span className='fourthEmoji'>✷</span> By using my understanding, strategic thinking, and attention to detail, I aim to develop modern websites that engage users, encourage meaningful interactions and bring about positive transformations.<span className='fifthEmoji'>✳︎</span>
             </p>
             <div className='about__additionalInfo'>
               <span data-aos="fade-down">Passionate</span>
