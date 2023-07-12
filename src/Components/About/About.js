@@ -82,8 +82,8 @@ const About = () => {
                 <p>— I find immense pleasure in the art of creating and recreating webpages that resonate deeply with me, immersing myself in the intricate world of web design where I can channel my passion to craft captivating online experiences that truly capture my heart.</p>
               </div>
               {/* TAGCLOUD */}
-              <div class="tagcloud__box">
-                <span class="tagcloud" data-aos="fade-down"></span>
+              <div className="tagcloud__box">
+                <span className="tagcloud" data-aos="fade-down"></span>
               </div>
             </div>
 
